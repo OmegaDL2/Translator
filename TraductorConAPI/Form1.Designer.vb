@@ -32,6 +32,9 @@ Partial Class Form1
         cbxTargetLanguage = New ComboBox()
         btnTranslate = New Button()
         btnTestDeepl = New Button()
+        btnTestGoogle = New Button()
+        lblTranslatorUsed = New Label()
+        ckbAutoDetect = New CheckBox()
         SuspendLayout()
         ' 
         ' Label1
@@ -69,22 +72,19 @@ Partial Class Form1
         ' radAutoDetect
         ' 
         radAutoDetect.AutoSize = True
-        radAutoDetect.Checked = True
-        radAutoDetect.Location = New Point(145, 7)
+        radAutoDetect.Location = New Point(382, 338)
         radAutoDetect.Name = "radAutoDetect"
         radAutoDetect.Size = New Size(197, 24)
         radAutoDetect.TabIndex = 4
-        radAutoDetect.TabStop = True
         radAutoDetect.Text = "Detecta Automaticament"
         radAutoDetect.UseVisualStyleBackColor = True
         ' 
         ' cbxOriginLanguage
         ' 
         cbxOriginLanguage.FormattingEnabled = True
-        cbxOriginLanguage.Items.AddRange(New Object() {"Alemán", "Anglès", "Castellà", "Francès", "Italià", "Japonès", "Neerlandès", "Polonès", "Portuguès", "Rus", "Xinès"})
-        cbxOriginLanguage.Location = New Point(353, 6)
+        cbxOriginLanguage.Location = New Point(373, 5)
         cbxOriginLanguage.Name = "cbxOriginLanguage"
-        cbxOriginLanguage.Size = New Size(151, 28)
+        cbxOriginLanguage.Size = New Size(206, 28)
         cbxOriginLanguage.TabIndex = 5
         ' 
         ' Label3
@@ -99,10 +99,9 @@ Partial Class Form1
         ' cbxTargetLanguage
         ' 
         cbxTargetLanguage.FormattingEnabled = True
-        cbxTargetLanguage.Items.AddRange(New Object() {"Alemán", "Anglès", "Castellà", "Francès", "Italià", "Japonès", "Neerlandès", "Polonès", "Portuguès", "Rus", "Xinès"})
         cbxTargetLanguage.Location = New Point(134, 123)
         cbxTargetLanguage.Name = "cbxTargetLanguage"
-        cbxTargetLanguage.Size = New Size(151, 28)
+        cbxTargetLanguage.Size = New Size(198, 28)
         cbxTargetLanguage.TabIndex = 7
         ' 
         ' btnTranslate
@@ -116,18 +115,50 @@ Partial Class Form1
         ' 
         ' btnTestDeepl
         ' 
-        btnTestDeepl.Location = New Point(286, 292)
+        btnTestDeepl.Location = New Point(191, 288)
         btnTestDeepl.Name = "btnTestDeepl"
         btnTestDeepl.Size = New Size(94, 29)
         btnTestDeepl.TabIndex = 9
         btnTestDeepl.Text = "test deep L"
         btnTestDeepl.UseVisualStyleBackColor = True
         ' 
+        ' btnTestGoogle
+        ' 
+        btnTestGoogle.Location = New Point(336, 288)
+        btnTestGoogle.Name = "btnTestGoogle"
+        btnTestGoogle.Size = New Size(94, 29)
+        btnTestGoogle.TabIndex = 10
+        btnTestGoogle.Text = "test Google"
+        btnTestGoogle.UseVisualStyleBackColor = True
+        ' 
+        ' lblTranslatorUsed
+        ' 
+        lblTranslatorUsed.AutoSize = True
+        lblTranslatorUsed.Location = New Point(24, 217)
+        lblTranslatorUsed.Name = "lblTranslatorUsed"
+        lblTranslatorUsed.Size = New Size(21, 20)
+        lblTranslatorUsed.TabIndex = 11
+        lblTranslatorUsed.Text = "--"
+        ' 
+        ' ckbAutoDetect
+        ' 
+        ckbAutoDetect.AutoSize = True
+        ckbAutoDetect.FlatStyle = FlatStyle.System
+        ckbAutoDetect.Location = New Point(145, 8)
+        ckbAutoDetect.Name = "ckbAutoDetect"
+        ckbAutoDetect.Size = New Size(212, 25)
+        ckbAutoDetect.TabIndex = 12
+        ckbAutoDetect.Text = "Detectar Automaticament"
+        ckbAutoDetect.UseVisualStyleBackColor = True
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
+        Controls.Add(ckbAutoDetect)
+        Controls.Add(lblTranslatorUsed)
+        Controls.Add(btnTestGoogle)
         Controls.Add(btnTestDeepl)
         Controls.Add(btnTranslate)
         Controls.Add(cbxTargetLanguage)
@@ -154,5 +185,8 @@ Partial Class Form1
     Friend WithEvents cbxTargetLanguage As ComboBox
     Friend WithEvents btnTranslate As Button
     Friend WithEvents btnTestDeepl As Button
+    Friend WithEvents btnTestGoogle As Button
+    Friend WithEvents lblTranslatorUsed As Label
+    Friend WithEvents ckbAutoDetect As CheckBox
 
 End Class
