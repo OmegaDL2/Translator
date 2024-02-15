@@ -13,8 +13,8 @@ Imports System.Diagnostics.Eventing.Reader
 Public Class Form1
     'Private Const DeepLApiKey As String = "YOUR-Deepl_PRIVATE_KEY"
 
-    Private Const DeepLApiKey As String = "YOUR_DeepLApiKey"
-    Private Const GoogleApiKey As String = "YOUR_GoogleApiKey"
+    Private Const DeepLApiKey As String = "YOUR_DEEPL_API_KEY"
+    Private Const GoogleApiKey As String = "YOUR_GOOGLE_API_KEY"
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -76,14 +76,6 @@ Public Class Form1
         End If
 
         txtEndText.Text = endText
-    End Sub
-
-    Private Sub btnTestDeepl_Click(sender As Object, e As EventArgs) Handles btnTestDeepl.Click
-        TestTranslationDeepl()
-    End Sub
-
-    Private Sub btnTestGoogle_Click(sender As Object, e As EventArgs) Handles btnTestGoogle.Click
-        TestTranslationGoogle()
     End Sub
 
     Sub TestTranslationDeepl() ' Test that TranslateTextWithDeepL works
@@ -188,7 +180,7 @@ ErrorHandler:
     End Function
 
     Private Function detectLanguage(ByVal OriginalText As String) As String
-        Dim translatedText As String = "ERORR: General Error on detectLanguage"
+        Dim langCode As String = "ERORR: General Error on detectLanguage"
 
         Dim translateClient As TranslationClient
         translateClient = TranslationClient.CreateFromApiKey(GoogleApiKey)
@@ -196,9 +188,9 @@ ErrorHandler:
         Dim response As Detection
         response = translateClient.DetectLanguage(OriginalText)
 
-        translatedText = response.Language()
+        langCode = response.Language()
 
-        Return translatedText
+        Return langCode
     End Function
 
     Private Function getLanguageCode(ByVal idioma As String) As String

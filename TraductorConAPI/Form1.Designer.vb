@@ -26,13 +26,10 @@ Partial Class Form1
         Label2 = New Label()
         txtEndText = New TextBox()
         txtOriginText = New TextBox()
-        radAutoDetect = New RadioButton()
         cbxOriginLanguage = New ComboBox()
         Label3 = New Label()
         cbxTargetLanguage = New ComboBox()
         btnTranslate = New Button()
-        btnTestDeepl = New Button()
-        btnTestGoogle = New Button()
         lblTranslatorUsed = New Label()
         ckbAutoDetect = New CheckBox()
         SuspendLayout()
@@ -69,16 +66,6 @@ Partial Class Form1
         txtOriginText.Size = New Size(540, 27)
         txtOriginText.TabIndex = 3
         ' 
-        ' radAutoDetect
-        ' 
-        radAutoDetect.AutoSize = True
-        radAutoDetect.Location = New Point(382, 338)
-        radAutoDetect.Name = "radAutoDetect"
-        radAutoDetect.Size = New Size(197, 24)
-        radAutoDetect.TabIndex = 4
-        radAutoDetect.Text = "Detecta Automaticament"
-        radAutoDetect.UseVisualStyleBackColor = True
-        ' 
         ' cbxOriginLanguage
         ' 
         cbxOriginLanguage.FormattingEnabled = True
@@ -106,30 +93,12 @@ Partial Class Form1
         ' 
         ' btnTranslate
         ' 
-        btnTranslate.Location = New Point(485, 108)
+        btnTranslate.Location = New Point(338, 123)
         btnTranslate.Name = "btnTranslate"
         btnTranslate.Size = New Size(94, 29)
         btnTranslate.TabIndex = 8
         btnTranslate.Text = "Traduir"
         btnTranslate.UseVisualStyleBackColor = True
-        ' 
-        ' btnTestDeepl
-        ' 
-        btnTestDeepl.Location = New Point(191, 288)
-        btnTestDeepl.Name = "btnTestDeepl"
-        btnTestDeepl.Size = New Size(94, 29)
-        btnTestDeepl.TabIndex = 9
-        btnTestDeepl.Text = "test deep L"
-        btnTestDeepl.UseVisualStyleBackColor = True
-        ' 
-        ' btnTestGoogle
-        ' 
-        btnTestGoogle.Location = New Point(336, 288)
-        btnTestGoogle.Name = "btnTestGoogle"
-        btnTestGoogle.Size = New Size(94, 29)
-        btnTestGoogle.TabIndex = 10
-        btnTestGoogle.Text = "test Google"
-        btnTestGoogle.UseVisualStyleBackColor = True
         ' 
         ' lblTranslatorUsed
         ' 
@@ -158,13 +127,10 @@ Partial Class Form1
         ClientSize = New Size(800, 450)
         Controls.Add(ckbAutoDetect)
         Controls.Add(lblTranslatorUsed)
-        Controls.Add(btnTestGoogle)
-        Controls.Add(btnTestDeepl)
         Controls.Add(btnTranslate)
         Controls.Add(cbxTargetLanguage)
         Controls.Add(Label3)
         Controls.Add(cbxOriginLanguage)
-        Controls.Add(radAutoDetect)
         Controls.Add(txtOriginText)
         Controls.Add(txtEndText)
         Controls.Add(Label2)
@@ -179,13 +145,10 @@ Partial Class Form1
     Friend WithEvents Label2 As Label
     Friend WithEvents txtEndText As TextBox
     Friend WithEvents txtOriginText As TextBox
-    Friend WithEvents radAutoDetect As RadioButton
     Friend WithEvents cbxOriginLanguage As ComboBox
     Friend WithEvents Label3 As Label
     Friend WithEvents cbxTargetLanguage As ComboBox
     Friend WithEvents btnTranslate As Button
-    Friend WithEvents btnTestDeepl As Button
-    Friend WithEvents btnTestGoogle As Button
     Friend WithEvents lblTranslatorUsed As Label
     Friend WithEvents ckbAutoDetect As CheckBox
 
